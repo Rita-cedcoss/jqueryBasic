@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer">
+     <lable>Password</lable> <br>
+     <input id="pswd" type="text"/><br>
+     <lable>Confirm Password</lable><br> 
+     <input id="cfpaswd"type="text"/><br>
+     <p id="display"></p>
+     <button id="match">Submit</button>
+
+     
+
+   
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+     crossorigin="anonymous"></script>
+     <script>
+      $(document).ready(function(){
+          $('#match').click(function()
+          {
+            // alert("dcsd");
+           var passwd=$('#pswd').val();  
+        //    console.log(passwd);
+        var cfPswd=$('#cfpaswd').val();
+        if(passwd!=cfPswd){
+          // alert("password is not match");
+          $('#display').html('password is not match');
+
+        }
+        else
+        {
+          $('#display').html('data is successfuly submited');
+          $('#pswd').val('');
+          $('#cfpaswd').val('');
+        }
+
+          })
+
+
+      })
+
+     </script>
+</body>
+</html>
