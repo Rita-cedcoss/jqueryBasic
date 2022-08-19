@@ -12,7 +12,7 @@ $(document).ready(function(){
          {
             matchItem+=" "+flowers[i];
          }
-         $("#sugestion").html(matchItem);
+         $("#sugestion").html("suggestion :"+matchItem);
       }
 
 
